@@ -15,3 +15,15 @@ Use 64-bit Ubuntu 18.04.2 LTS as the host for "best" results.
 
 The `modern` installation method (borrowed from https://github.com/foxlet/macOS-Simple-KVM) requires an internet connection
 (during macOS installation) to work.
+
+### About lzma compression
+
+in order to minimize the disk occupation, we use lzma the compress CloverNG.qcow2
+for compression:
+bash ```
+tar -c --lzma -f CloverNG.qcow2.tar.lzma CloverNG.qcow2
+```
+for decompression:
+bash ```
+tar xvp --lzma -f CloverNG.qcow2.tar.lzma
+```
